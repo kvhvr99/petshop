@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact | Pet Shop</title>
+    <link rel="shortcut icon" href="/static/logo1.avif" type="image/x-icon">
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        /*nav bar styling*/
+        .navbar{
+        display: flex;
+        align-items: center;
+        padding-left: 180px;
+        padding-right: 200px;
+        background:radial-gradient(#fff,#ffd6d6);
+        font-size: larger;
+        }
+        .logo img{
+            width: 80px;
+            height: 80px;
+            padding: 20px 0px;
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul{
+            display:inline-block;
+            list-style-type: none;
+        }
+        nav ul li{
+            display: inline-block;
+            margin-right: 20px; 
+        }
+        .navbar a{
+            text-decoration: none;
+            color: #555555;
+        }
+        .container{
+            padding: 60px 60px 100px;
+            display: flex;
+            justify-content: space-evenly;
+            background:radial-gradient(#fff,#fff9c7);
+            align-items: center;
+        }
+        .image img{
+            width: 700px;
+            height: 500px;
+        }
+        .info{
+            padding: 40px;
+            background-color: #c4acac;
+            font-size: larger;
+            border-radius: 10px;
+        }
+        .info h2{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="/static/logo1.avif" width="70px" >
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/breeds">Breeds</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/login">Account</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="info">
+            <div class="branch">
+                <h2>Tirupati Branch:</h2>
+                <p><b>D.No</b> : 10-1-8</p>
+                <p><b>Street</b> : T.K.Street</p>
+                <p><b>Landmark</b> : RS Junction</p>
+                <p><b>District</b> : Tirupati</p>
+                <p><b>State</b> : Andhra Pradesh</p>
+                <br>
+                <p><b>Phone : </b>9347425025</p>
+                <br>
+                <p><b>Email</b> : amudalareddysekhar@gmail.com</p>
+            </div>
+        </div>
+        <div class="image">
+            <img src="/static/contact_image.webp" alt="">
+        </div>
+    </div>
+</body>
+</html>

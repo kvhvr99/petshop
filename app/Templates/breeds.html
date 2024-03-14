@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breeds | Pet Shop</title>
+    <link rel="shortcut icon" href="/static/logo1.avif" type="image/x-icon">
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        /*nav bar styling*/
+        .navbar{
+        display: flex;
+        align-items: center;
+        padding-left: 180px;
+        padding-right: 200px;
+        background:radial-gradient(#fff,#ffd6d6);
+        font-size: larger;
+        }
+        .logo img{
+            width: 80px;
+            height: 80px;
+            padding: 20px 0px;
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul{
+            display:inline-block;
+            list-style-type: none;
+        }
+        nav ul li{
+            display: inline-block;
+            margin-right: 20px; 
+        }
+        a{
+            text-decoration: none;
+            color: #555555;
+        }
+
+        /* body styling */
+        .breds{
+            background:radial-gradient(#fff,#fff9c7);
+            padding-bottom: 40px;
+        }
+        .breds a{
+            color: blue;
+        }
+        .breds h1{
+            color: darkcyan;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        table{
+            text-align: center;
+            color: black;
+            background-color: rgba(169, 169, 169, 0.078);
+            width: 1000px;
+            border-color: darkgreen;
+            margin: 3% 17%;
+        }
+        tr{
+            padding: 20px ;
+        }
+        img{
+            height: 150px;
+            width: 150px;
+            transition: 2s;
+        }
+        .C-table img:hover{
+            scale: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="/static/logo1.avif" width="70px" >
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/breeds">Breeds</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/login">Account</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="breds"> 
+        <h1><b><u>Breeds List</u></b></h1>
+        <div class="C-table">
+            <table border="1">
+                <tr><th>Sl.No</th><th>Breed Name</th><th>Picture</th><th>Links</th><th>Price</th></tr>
+                <tr><td>1</td><td>Golden Retriever</td><td><img src="/static/golden-2.jpg" ></td><td><a href="https://en.wikipedia.org/wiki/Golden_Retriever">Read more</a></td><td>&#8377;20,000</td></tr>
+                <tr><td>2</td><td>Havanese</td><td><img src="/static/havanese.jpg"></td><td><a href="https://en.wikipedia.org/wiki/Havanese_dog">Read more</a></td><td>&#8377;35,000</td></tr>
+                <tr><td>3</td><td>German Shepherd</td><td><img src="/static/german.jpg"></td><td><a href="https://en.wikipedia.org/wiki/German_Shepherd">Read more</a></td><td>&#8377;18,000</td></tr>
+                <tr><td>4</td><td>Indian Spitz</td><td><img src="/static/indian spitz.webp"></td><td><a href="https://en.wikipedia.org/wiki/Indian_Spitz">Read more</a></td><td>&#8377;6,000</td></tr>
+                <tr><td>5</td><td>shih tzu</td><td><img src="/static/shih tzu.jpg"></td><td><a href="https://en.wikipedia.org/wiki/Shih_Tzu">Read more</a></td><td>&#8377;30,000</td></tr>
+                <tr><td>6</td><td>Siberian Huskey</td><td><img src="/static/huskey.jpg"></td><td><a href="https://en.wikipedia.org/wiki/Siberian_Husky">Read more</a></td><td>&#8377;38,000</td></tr>
+                <tr><td>7</td><td>Labrador</td><td><img src="/static/labrador-puppy.jpg"></td><td><a href="https://en.wikipedia.org/wiki/Labrador_Retriever">Read more</a></td><td>&#8377;10,000</td></tr>
+                <tr><td>8</td><td>pomeranian</td><td><img src="/static/pomeranian-dog.webp"></td><td><a href="https://en.wikipedia.org/wiki/Pomeranian_dog">Read more</a></td><td>&#8377;24,000</td></tr>
+                <tr><td>9</td><td>Pug</td><td><img src="/static/pug-dog.webp"></td><td><a href="https://en.wikipedia.org/wiki/Pug">Read more</a></td><td>&#8377;8,000</td></tr>
+                <tr><td>10</td><td>Boxer</td><td><img src="/static/boxer.jpg"></td><td><a href="https://en.wikipedia.org/wiki/Boxer_(dog)">Read more</a></td><td>&#8377;9,500</td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

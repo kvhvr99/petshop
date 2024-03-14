@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase | Pet Shop</title>
+    <link rel="shortcut icon" href="/static/logo1.avif" type="image/x-icon">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /*nav bar styling*/
+        .navbar{
+        display: flex;
+        align-items: center;
+        padding-left: 180px;
+        padding-right: 200px;
+        background:radial-gradient(#fff,#ffd6d6);
+        font-size: larger;
+        }
+        .logo img{
+            width: 80px;
+            height: 80px;
+            padding: 20px 0px;
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul{
+            display:inline-block;
+            list-style-type: none;
+        }
+        nav ul li{
+            display: inline-block;
+            margin-right: 20px; 
+        }
+        .navbar a{
+            text-decoration: none;
+            color: #555555;
+        }
+
+        .buying{
+            background:radial-gradient(#fff,#fff9c7);
+            padding: 60px;
+        }
+        
+        /* Apply basic styling to the form container */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Style the form headings
+        h1 {
+            text-align: center;
+            color: #13a450;
+            padding-bottom: 8px;
+        } */
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            color: #13a450;
+            padding-bottom: 8px;
+        }
+
+        /* Style form labels and input fields */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input,select {
+            padding: 10px;
+            margin-bottom: 15px;
+            padding-right: 230px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Style the submit button */
+        #submit {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            background-color: #258cd1;
+        }
+        .message{
+            text-align: center;
+            color: blue;
+            padding-top: 20px;
+            font-size: 23px;
+        }
+        .error{
+            text-align: center;
+            color: red;
+            padding-top: 20px;
+            font-size: 23px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="/static/logo1.avif" width="70px" >
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/userHome">Home</a></li>
+                <li><a href="/UserBreeds">Breeds</a></li>
+                <li><a href="/UserAbout">About</a></li>
+                <li><a href="/Usercontact">Contact</a></li>
+                <li><a href="/home">Logout</a></li>
+                <li><a href="/myorder">MyOrders</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="buying">
+        <!-- <h1>PET SHOP</h1> -->
+        <p>Fill out the form to purchase a pet.</p>
+
+        <form action="/buy" method="post">
+            <label for="name">Your UserName:</label>
+            <input type="text" id="name" name="UserName" required><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" min="10" max="10" required><br><br>
+
+            <label for="pet">Select a Pet:</label>
+            <select id="pet" name="pet" required >
+                <option value="">Select Pets</option>
+                <option value="Golden Retriever">Golden Retriever</option>
+                <option value="Havanese">Havanese</option>
+                <option value="German Shepherd">German Shepherd</option>
+                <option value="Indian Spitz">Indian Spitz</option>
+                <option value="Shih tzu">Shih tzu</option>
+                <option value="Siberian Huskey">Siberian Huskey</option>
+                <option value="Labrador">Labrador</option>
+                <option value="pomeranian">Pomeranian</option>
+                <option value="Pug">Pug</option>
+                <option value="Boxer">Boxer</option>
+            </select><br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="3" required><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <input type="submit" id="submit" value="Purchase">
+        </form>
+        <div class="message">{%if message%}{{message}}{%endif%}</div>
+        <div class="error">{%if error%}{{error}}{%endif%}</div>
+    </div>
+    
+</body>
+</html>

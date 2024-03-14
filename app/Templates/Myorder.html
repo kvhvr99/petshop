@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myorders | Pet Shop</title>
+    <link rel="shortcut icon" href="/static/logo1.avif" type="image/x-icon">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /*nav bar styling*/
+        .navbar{
+        display: flex;
+        align-items: center;
+        padding-left: 180px;
+        padding-right: 200px;
+        background:radial-gradient(#fff,#ffd6d6);
+        font-size: larger;
+        }
+        .logo img{
+            width: 80px;
+            height: 80px;
+            padding: 20px 0px;
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul{
+            display:inline-block;
+            list-style-type: none;
+        }
+        nav ul li{
+            display: inline-block;
+            margin-right: 20px; 
+        }
+        a{
+            text-decoration: none;
+            color: #555555;
+        }
+        .image{
+            margin-left: 100px;
+            
+        }
+        .image img{
+
+            height: 400px;
+            width: 600px;
+            padding:100px 0;
+            
+        }
+
+        /* Orders Displaying */
+        table{
+            text-align: center;
+            color: black;
+            background-color: rgba(169, 169, 169, 0.078);
+            width: 1000px;
+            border-color: darkgreen;
+            margin: 3% 17%;
+        }
+        th,td{
+            padding: 20px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="/static/logo1.avif" width="70px" >
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/userHome">Home</a></li>
+                <li><a href="/UserBreeds">Breeds</a></li>
+                <li><a href="/UserAbout">About</a></li>
+                <li><a href="/UserContact">Contact</a></li>
+                <li><a href="/home">Logout</a></li>
+                <li><a href="/myorder">MyOrders</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="Orders">
+        <table border="1px">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>PH_NO</th>
+                <th>PET NAME</th>
+                <th>QUANTITY</th>
+                <th>ADDRESS</th>
+                <th>STATUS</th>
+            </tr>
+            {% for order in myorder %}
+            <tr>
+                <td data-label="ID">{{ order[0] }}</td>
+                <td data-label="NAME">{{ order[1] }}</td>
+                <td data-label="EMAIL">{{ order[2] }}</td>
+                <td data-label="PH_NO">{{ order[3] }}</td>
+                <td data-label="PET NAME">{{ order[4] }}</td>
+                <td data-label="QUANTITY">{{ order[5] }}</td>
+                <td data-label="ADDRESS">{{ order[6] }}</td>
+                <td data-label="STATUS">{{ order[7] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Pet Shop</title>
+    <link rel="shortcut icon" href="/static/logo1.avif" type="image/x-icon">
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        /*nav bar styling*/
+        .navbar{
+        display: flex;
+        align-items: center;
+        padding-left: 180px;
+        padding-right: 200px;
+        background:radial-gradient(#fff,#ffd6d6);
+        font-size: larger;
+        }
+        .logo img{
+            width: 80px;
+            height: 80px;
+            padding: 20px 0px;
+        }
+        nav{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul{
+            display:inline-block;
+            list-style-type: none;
+        }
+        nav ul li{
+            display: inline-block;
+            margin-right: 20px; 
+        }
+        a{
+            text-decoration: none;
+            color: #555555;
+        }
+        .image{
+            margin-left: 100px;
+            
+        }
+        .image img{
+
+            height: 400px;
+            width: 600px;
+            padding:100px 0;
+            
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background:radial-gradient(#fff,#fff9c7);
+        }
+        .login{
+            margin:160px 200px 200px 0px;
+            border: 1px solid black;
+            padding:30px 20px;
+            border-radius: 5px;
+            background-color: #e7dbdb;
+            justify-content: center;
+        }
+        .login h1{
+            text-align: center;
+            color: green;
+            margin-bottom: 10px;
+            font-size: 30px;
+        }
+        .username input,.pw input{
+            width: 250px;
+            border-radius: 4px;
+            padding: 6px 10px;
+            font-size: 16px;
+            border:0.5px solid gray;
+        }
+        .username,.pw{
+            margin-bottom: 10px;
+        }
+        button{
+            width: 80px;
+            padding: 5px 5px;
+            justify-content: center;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            background-color: rgb(125, 153, 153);
+            font-size: large;
+            margin-bottom: 4px;
+        }
+        .btn{
+            margin-left: 33%;
+            margin-bottom: 10px;
+        }
+        button:hover{
+            scale: 1.2;
+        }
+        .fp{
+            margin-top: 10px;
+        }
+        .fp a{
+            text-decoration: none;
+            color: black;
+        }
+        .btn a{
+            text-decoration: none;
+            color: white;
+        }
+        .register a{
+            text-decoration: none;
+            color: blue;
+        }
+        .error{
+            margin-top: 20px;
+            margin-left: 5px;
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="/static/logo1.avif" width="70px" >
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/breeds">Breeds</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/login">Account</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <div class="image">
+            <img src="/static/background2.jpg" >
+        </div>
+        
+        <form class="login" action="/login" method="post" >
+            <h1>PetShop</h1>
+            <div class="username">
+                <input type="text" name="username" placeholder="Phone number, username or email" required >
+            </div>
+            <div class="pw">
+                <input type="password" name="password" placeholder="Password" required >
+            </div>
+            <div class="btn">
+                <button><a>Log in</a></button>
+            </div>
+            <hr>
+            <div class="fp">
+                <p><a href="">Forgot Password?</a></p>
+            </div>
+            <div class="register">
+                <p>New User, <a href="/register">Register</a> now</p>
+            </div>
+            <div class="error">{%if message%}{{message}}{%endif%}</div>
+        </form>
+    </div>
+</body>
+</html>
